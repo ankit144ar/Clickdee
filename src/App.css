@@ -86,3 +86,8 @@
       transform: translateY(0.125rem);
   opacity: 1;
 }
+.Item:hover .item-background {
+    transform:scale(1.06);
+    background:#fff;
+    box-shadow: 0 calc(1.38889*1vw) calc(2.77778*1vw) rgba(0, 0, 0, 0.05);
+}
