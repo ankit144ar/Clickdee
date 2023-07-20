@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.item-content h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(1.875*1vw);
+  line-height: 1.11;
+  font-weight: 400;
+  margin: 1.125rem 0 0;
+  color: #001B5D;
+  font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-container.chooseus-title h2 {
+  font-size: calc(3.05556*1vw);
+  line-height: 1.4;
+  font-family: 'Roboto';
+  color: #001B5D;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-icon img {
+  width: 50px;
+  margin-bottom: 18px;
+}
+
+.item-content p,.title-container.chooseus-title p {
+  margin: 1.25rem 0 0;
+  font-size: calc(1.04167*1vw);
+  line-height: 1.47;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Item {
+  padding: calc(4.79167*1vw) calc(3.47222*1vw);
+  width: 25.9%;
+  box-sizing: border-box;
+}
+
+.title-container.chooseus-title {
+  width: 48.2%;
+  height: calc(25.34722*1vw);
+  padding: calc(5.55556*1vw) calc(6.94444*1vw) calc(2.77778*1vw);
+  box-sizing: border-box;
+}
+
+.About-Us {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.Item:nth-child(2n) .item-background {
+  background-color: #f7f9fb !important;
+}
+.Item{
+  position:relative;
+}
+.item-background{
+      position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: 50% 100%;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  box-shadow: none;
+  transform:scale(1);
 }
 
-.App-link {
-  color: #61dafb;
+.item-content {
+  z-index: 9;
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Item p {
+  opacity:0
+}
+.Item:hover{
+      transform: translateY(-1.875rem);
+      transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.Item:hover p{
+      transform: translateY(0.125rem);
+  opacity: 1;
 }
